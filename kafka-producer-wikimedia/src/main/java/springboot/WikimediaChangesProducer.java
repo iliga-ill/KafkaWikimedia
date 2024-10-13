@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class WikimediaChangesProducer {
 
-    private KafkaTemplate<String, String> kafkaTemplate;
+    private final KafkaTemplate<String, String> kafkaTemplate;
 
     public void sendMessage() throws InterruptedException {
         String topic = "wikimedia_recentchange";
